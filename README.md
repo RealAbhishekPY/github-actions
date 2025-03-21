@@ -18,21 +18,21 @@ GitHub Actions is a powerful CI/CD platform that allows you to automate, customi
    - Actions are reusable units of code that can be used to perform specific tasks within a workflow. They can be created, shared, and used across different workflows and repositories.
 
 **4. Service Containers:**
-   - Service containers are Docker containers that provide services needed for workflows, such as databases or web services. They are created fresh for each job and destroyed when the job completes[1](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers).
+   - Service containers are Docker containers that provide services needed for workflows, such as databases or web services. They are created fresh for each job and destroyed when the job completes[Container service](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers).
 
 ### Best Practices
 
 **5. Best Practices:**
-   - **Security**: Use secrets to store sensitive information, implement security hardening practices, and use specific action version tags to avoid supply-chain attacks[3](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)[2](https://blog.gitguardian.com/github-actions-security-cheat-sheet/).
+   - **Security**: Use secrets to store sensitive information, implement security hardening practices, and use specific action version tags to avoid supply-chain attacks[Github-Actions Security cheatsheet](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)[2](https://blog.gitguardian.com/github-actions-security-cheat-sheet/).
    - **Efficiency**: Keep actions minimal, avoid unnecessary dependencies, and limit environment variables to the narrowest possible scope[4](https://www.datree.io/resources/github-actions-best-practices).
-   - **Maintainability**: Ensure every repository contains a CI/CD workflow, store authors in action metadata, and avoid using self-hosted runners in public repositories[4](https://www.datree.io/resources/github-actions-best-practices).
+   - **Maintainability**: Ensure every repository contains a CI/CD workflow, store authors in action metadata, and avoid using self-hosted runners in public repositories[Github-Actions Best practices](https://www.datree.io/resources/github-actions-best-practices).
 
 ### Real-world Applications
 
 **6. Use Cases:**
    - **Continuous Integration (CI)**: Automate the process of integrating code changes from multiple contributors into a shared repository.
    - **Continuous Delivery (CD)**: Facilitate automated testing and deployment, ensuring reliable and quick delivery of code changes.
-   - **Automation Beyond CI/CD**: Run workflows for various events, such as labeling issues, syncing comments, or triggering cloud deployments[5](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions).
+   - **Automation Beyond CI/CD**: Run workflows for various events, such as labeling issues, syncing comments, or triggering cloud deployments[Github-Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions).
 
 ### Summary
 

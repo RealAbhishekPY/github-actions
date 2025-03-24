@@ -1,5 +1,5 @@
 GitHub Actions is a powerful CI/CD platform that allows you to automate, customize, and execute your software development workflows directly within your GitHub repository. Here's a comprehensive overview of GitHub Actions:
-
+---
 ### Core Concepts
 
 **1. GitHub Actions Architecture:**

@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -23,6 +24,23 @@ jobs:
         pip install pytest
 
     - name: Run tests
+      id: run-tests
       run: |
         cd src
-        python -m pytest calculator.py
+        python -m pytest calculator.py | tee test-output.log
+
+    - name: Summarize logs
+      id: summarize
+      run: |
+        LOGS=$(cat test-output.log)
+        curl -X POST https://api.openai.com/v1/engines/davinci-codex/completions \
+        -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "prompt": "Summarize the following logs:\n\n'"$LOGS"'",
+          "max_tokens": 100
+        }' > summary.json
+
+    - name: Output summary
+      run: |
+        cat summary.json
